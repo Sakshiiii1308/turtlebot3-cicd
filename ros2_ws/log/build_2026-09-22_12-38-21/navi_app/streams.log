@@ -1,0 +1,27 @@
+[0.422s] Invoking command in '/home/tecnical/turtlebot-cicd/ros2_ws/src/navi_app': PYTHONPATH=/home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navi_app build --build-base /home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/build install --record /home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/install.log --install-scripts $base/lib/navi_app --single-version-externally-managed install_data
+[0.570s] running egg_info
+[0.581s] writing ../../build/navi_app/navi_app.egg-info/PKG-INFO
+[0.581s] writing dependency_links to ../../build/navi_app/navi_app.egg-info/dependency_links.txt
+[0.581s] writing entry points to ../../build/navi_app/navi_app.egg-info/entry_points.txt
+[0.581s] writing requirements to ../../build/navi_app/navi_app.egg-info/requires.txt
+[0.581s] writing top-level names to ../../build/navi_app/navi_app.egg-info/top_level.txt
+[0.603s] reading manifest file '../../build/navi_app/navi_app.egg-info/SOURCES.txt'
+[0.604s] writing manifest file '../../build/navi_app/navi_app.egg-info/SOURCES.txt'
+[0.604s] running build
+[0.604s] running build_py
+[0.604s] copying navi_app/__init__.py -> /home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/build/lib/navi_app
+[0.604s] copying navi_app/navigation_node.py -> /home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/build/lib/navi_app
+[0.604s] running install
+[0.606s] running install_lib
+[0.616s] copying /home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/build/lib/navi_app/navigation_node.py -> /home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/lib/python3.10/site-packages/navi_app
+[0.616s] byte-compiling /home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/lib/python3.10/site-packages/navi_app/navigation_node.py to navigation_node.cpython-310.pyc
+[0.616s] running install_data
+[0.617s] copying resource/navi_app -> /home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/share/ament_index/resource_index/packages
+[0.617s] copying package.xml -> /home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/share/navi_app
+[0.617s] running install_egg_info
+[0.628s] removing '/home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/lib/python3.10/site-packages/navi_app-0.0.0-py3.10.egg-info' (and everything under it)
+[0.628s] Copying ../../build/navi_app/navi_app.egg-info to /home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/lib/python3.10/site-packages/navi_app-0.0.0-py3.10.egg-info
+[0.628s] running install_scripts
+[0.706s] Installing navigation_node script to /home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/lib/navi_app
+[0.706s] writing list of installed files to '/home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/install.log'
+[0.717s] Invoked command in '/home/tecnical/turtlebot-cicd/ros2_ws/src/navi_app' returned '0': PYTHONPATH=/home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navi_app build --build-base /home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/build install --record /home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/install.log --install-scripts $base/lib/navi_app --single-version-externally-managed install_data
