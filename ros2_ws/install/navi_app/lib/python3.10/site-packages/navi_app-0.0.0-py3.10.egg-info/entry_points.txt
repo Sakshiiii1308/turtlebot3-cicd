@@ -1,2 +1,0 @@
-[console_scripts]
-navigation_node = navi_app.navigation_node:main
