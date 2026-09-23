@@ -1,0 +1,26 @@
+running egg_info
+creating ../../build/navi_app/navi_app.egg-info
+writing ../../build/navi_app/navi_app.egg-info/PKG-INFO
+writing dependency_links to ../../build/navi_app/navi_app.egg-info/dependency_links.txt
+writing requirements to ../../build/navi_app/navi_app.egg-info/requires.txt
+writing top-level names to ../../build/navi_app/navi_app.egg-info/top_level.txt
+writing manifest file '../../build/navi_app/navi_app.egg-info/SOURCES.txt'
+reading manifest file '../../build/navi_app/navi_app.egg-info/SOURCES.txt'
+writing manifest file '../../build/navi_app/navi_app.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/build/lib/navi_app
+copying navi_app/__init__.py -> /home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/build/lib/navi_app
+running install
+running install_lib
+creating /home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/lib/python3.10/site-packages/navi_app
+copying /home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/build/lib/navi_app/__init__.py -> /home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/lib/python3.10/site-packages/navi_app
+byte-compiling /home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/lib/python3.10/site-packages/navi_app/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/share/ament_index/resource_index/packages
+copying resource/navi_app -> /home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/share/ament_index/resource_index/packages
+copying package.xml -> /home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/share/navi_app
+running install_egg_info
+Copying ../../build/navi_app/navi_app.egg-info to /home/tecnical/turtlebot-cicd/ros2_ws/install/navi_app/lib/python3.10/site-packages/navi_app-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/tecnical/turtlebot-cicd/ros2_ws/build/navi_app/install.log'
