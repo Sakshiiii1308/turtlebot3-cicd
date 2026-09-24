@@ -22,7 +22,6 @@ class NavigationNode(Node):
 
         self.send_goal()
 
-
     def send_goal(self):
 
         self.get_logger().info('Waiting for Nav2...')
@@ -30,7 +29,6 @@ class NavigationNode(Node):
         self.action_client.wait_for_server()
 
         self.get_logger().info('Nav2 is available')
-
 
         goal_msg = NavigateToPose.Goal()
 
@@ -61,7 +59,6 @@ class NavigationNode(Node):
             self.goal_response_callback
         )
 
-
     def goal_response_callback(self, future):
 
         goal_handle = future.result()
@@ -80,15 +77,13 @@ class NavigationNode(Node):
             self.get_result_callback
         )
 
-
     def feedback_callback(self, feedback_msg):
 
         feedback = feedback_msg.feedback
 
         self.get_logger().info(
-            f'Distance remaining: {feedback.distance_remaining:.2f} m' 
+            f'Distance remaining: {feedback.distance_remaining:.2f} m'
         )
-
 
     def get_result_callback(self, future):
 
