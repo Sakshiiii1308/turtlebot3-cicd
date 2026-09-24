@@ -53,7 +53,7 @@ pipeline {
                 '''
             }
         }
-        stage('ROS 2 Tests') {
+        stage('ROS2 Integration Tests') {
             steps {
                 sh '''
                     docker exec ros2-humble bash -lc '
@@ -62,7 +62,7 @@ pipeline {
                         cd /tmp/jenkins-ros2
 
                         colcon test --packages-select navi_app \
-                            --pytest-args -k "not navigation_integra>
+                            --pytest-args -k navigation_integration
 
                         colcon test-result --verbose
                     '
