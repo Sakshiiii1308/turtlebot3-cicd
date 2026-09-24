@@ -53,5 +53,15 @@ pipeline {
                 '''
             }
         }
+        stage('Check Nav2 Connection'){
+            steps {
+                sh '''
+                    docker exec ros2-humble bash -lc '
+                        source /opt/ros/humble/setup.bash
+                        ros2 action list | grep -Fx /navigate_to_pose
+                    '
+                '''
+           }
+        }  
     }
 }
