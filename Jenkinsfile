@@ -46,7 +46,7 @@ pipeline {
                         cd /tmp/jenkins-ros2
 
                         colcon test --packages-select navi_app \
-                            --pytest-args -k "not navigation_integration"
+                            --pytest-args -k "not TestNavigationIntegration"
 
                         colcon test-result --verbose
                     '
