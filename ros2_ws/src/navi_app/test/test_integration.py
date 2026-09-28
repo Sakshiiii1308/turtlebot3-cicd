@@ -49,7 +49,7 @@ class TestNavigationIntegration(unittest.TestCase):
 
         goal.pose.pose.position.x = 1.1
         goal.pose.pose.position.y = 0.9
-        goal.pose.pose.orientation.w = 0.0
+        goal.pose.pose.orientation.w = 1.0
 
         future = self.action_client.send_goal_async(goal)
 
