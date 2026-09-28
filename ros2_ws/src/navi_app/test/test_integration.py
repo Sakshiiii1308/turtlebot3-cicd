@@ -59,11 +59,22 @@ class TestNavigationIntegration(unittest.TestCase):
              timeout_sec=30.0
         )
 
-        self.assertTrue(future.done())
+        self.assertTrue(
+            future.done(),
+            'Nav2 did not respond within 30 sec'
+        )
 
         goal_handle = future.result()
 
-        self.assertTrue(goal_handle.accepted)
+        self.assertIsNotNone(
+            goal_handle,
+            'Nav2 returned no goal handle'
+        )
+
+        self.assertTrue(
+            goal_handle.accepted,
+            'Nav2 rejected the navigation goal'
+        )
 
         cancel_future = goal_handle.cancel_goal_async()
 
@@ -73,7 +84,10 @@ class TestNavigationIntegration(unittest.TestCase):
             timeout_sec=30.0
         )
 
-        self.assertTrue(cancel_future.done())
+        self.assertTrue(
+            cancel_future.done(),
+            'Nav2 did not respond to cancellation request'
+        )
 
     def tearDown(self):
 
