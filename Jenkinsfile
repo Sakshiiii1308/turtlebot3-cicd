@@ -42,8 +42,14 @@ pipeline {
 
                     docker exec ros2-humble bash -c '
                         set -e
-                        source /opt/ros/humble/setup.bash
                         cd /tmp/jenkins-ros2
+
+                        source /opt/ros/humble/setup.bash
+
+                        export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+                        export ROS_DOMAIN_ID=0
+
+                        source install/setup.bash
 
                         colcon test --packages-select navi_app \
                             --pytest-args -k "not TestNavigationIntegration"
@@ -61,11 +67,11 @@ pipeline {
 
                         cd /tmp/jenkins-ros2
 
-                        source /opt/ros/humble/setup.bash
-                        source install/setup.bash
-                        
+                        source /opt/ros/humble/setup.bash                        
                         export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+
                         export ROS_DOMAIN_ID=0
+                        source install/setup.bash
 
                         echo "Checking Nav2 lifecycle states"
 
