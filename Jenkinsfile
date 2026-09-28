@@ -62,7 +62,7 @@ pipeline {
                         cd /tmp/jenkins-ros2
 
                         colcon test --packages-select navi_app \
-                            --pytest-args -k navigation_integration
+                            --pytest-args -k "TestNavigationIntegration"
 
                         colcon test-result --verbose
                     '
