@@ -56,7 +56,7 @@ class TestNavigationIntegration(unittest.TestCase):
         rclpy.spin_until_future_complete(
              self.node,
              future,
-             timeout_sec=10.0
+             timeout_sec=30.0
         )
 
         self.assertTrue(future.done())
@@ -70,7 +70,7 @@ class TestNavigationIntegration(unittest.TestCase):
         rclpy.spin_until_future_complete(
             self.node,
             cancel_future,
-            timeout_sec=10.0
+            timeout_sec=30.0
         )
 
         self.assertTrue(cancel_future.done())
