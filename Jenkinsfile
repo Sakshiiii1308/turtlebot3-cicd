@@ -57,9 +57,22 @@ pipeline {
             steps {
                 sh '''
                     docker exec ros2-humble bash -lc '
-                        source /opt/ros/humble/setup.bash
-                        source /tmp/jenkins-ros2/install/setup.bash
+                        set -e
+
                         cd /tmp/jenkins-ros2
+
+                        source /opt/ros/humble/setup.bash
+                        source install/setup.bash
+                        
+                        export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+                        export ROS_DOMAIN_ID=0
+
+                        echo "Checking Nav2 lifecycle states"
+
+                        ros2 lifecycle get /bt_navigator
+                        ros2 lifecycle get /behavior_server
+
+                        echo "Running integration tests"
 
                         colcon test --packages-select navi_app \
                             --pytest-args -k "TestNavigationIntegration"
