@@ -129,10 +129,10 @@ pipeline {
                           --password-stdin
 
                        docker tag turtlebot3-navigation:latest \
-                          "$DOCKER_USER/turtlebot3-navigation:lates>
+                          "$DOCKER_USER/turtlebot3-navigation:latest"
 
                        docker push \
-                          "$DOCKER_USER/turtlebot3-navigation:lates>
+                          "$DOCKER_USER/turtlebot3-navigation:latest"
 
                        docker logout
                    '''
