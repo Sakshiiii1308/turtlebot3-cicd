@@ -1,0 +1,20 @@
+name: Trigger Jenkins
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  trigger-jenkins:
+    runs-on: [self-hosted, turtlebot3]
+
+    steps:
+      - name: Trigger Jenkins
+        env:
+          JENKINS_TOKEN: ${{ secrets.JENKINS_TOKEN }}
+        run: |
+          curl --fail --show-error \
+            "http://localhost:8080/buildByToken/build?job=turtlebot3-cicd&token=${JENKINS_TOKEN}"
+
