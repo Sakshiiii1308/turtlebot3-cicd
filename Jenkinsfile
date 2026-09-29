@@ -98,6 +98,18 @@ pipeline {
                     '
                 '''
            }
-        }  
+        }
+
+        stage('Docker Build') {
+           steps {
+               sh '''
+                  set -e
+
+                    docker build \
+                        -t turtlebot3-navigation:latest \
+                        -f Dockerfile .
+                 '''
+            }
+         }
     }
 }
