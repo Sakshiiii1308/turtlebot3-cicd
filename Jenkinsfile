@@ -35,6 +35,33 @@ pipeline {
             }
         }
 
+        stage('Docker Hub Push') {
+            steps {
+               withCredentials([
+                   usernamePassword(
+                       credentialsId: 'dockerhub-credentials',
+                       usernameVariable: 'DOCKER_USER',
+                       passwordVariable: 'DOCKER_TOKEN'
+                   )
+               ]) {
+                   sh '''
+                       set -e
+
+                       echo "$DOCKER_TOKEN" | docker login \
+                           --username "$DOCKER_USER" \
+                           --password-stdin
+
+                       docker tag turtlebot3-navigation:latest \
+                           "$DOCKER_USER/turtlebot3-navigation:latest"
+
+                       docker push \
+                           "$DOCKER_USER/turtlebot3-navigation-latest"
+
+                       docker logout
+                   '''
+               }
+            }
+        }
         stage('ROS 2 Tests') {
             steps {
                 sh '''
