@@ -37,8 +37,8 @@ class NavigationNode(Node):
         goal_msg.pose.header.frame_id = 'map'
         goal_msg.pose.header.stamp = self.get_clock().now().to_msg()
 
-        goal_msg.pose.pose.position.x = 2.61
-        goal_msg.pose.pose.position.y = -1.43
+        goal_msg.pose.pose.position.x = 0.47
+        goal_msg.pose.pose.position.y = -0.5
         goal_msg.pose.pose.position.z = 0.0
 
         goal_msg.pose.pose.orientation.x = 0.0
@@ -47,7 +47,7 @@ class NavigationNode(Node):
         goal_msg.pose.pose.orientation.w = 1.0
 
         self.get_logger().info(
-            'Sending navigation goal: x=2.61, y=-1.43'
+            'Sending navigation goal: x=0.47, y=-0.5'
         )
 
         self.send_goal_future = self.action_client.send_goal_async(
