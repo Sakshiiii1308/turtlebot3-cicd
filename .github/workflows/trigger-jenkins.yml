@@ -8,7 +8,7 @@ on:
 
 jobs:
   trigger-jenkins:
-    runs-on: [self-hosted, turtlebot3]
+    runs-on: [self-hosted, Linux, X64]
 
     steps:
       - name: Trigger Jenkins
